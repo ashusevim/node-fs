@@ -1,9 +1,9 @@
 import fs from "node:fs"
 import process from "node:process"
 
-async function deleteFile(){
+async function deleteFile(filePath){
     try {
-        await fs.deleteFile(userFilePath);
+        await fs.promises.unlink(filePath);
         console.log("File deleted successfully");
     } catch (error) {
         console.log("Something went wrong while deleting the file");

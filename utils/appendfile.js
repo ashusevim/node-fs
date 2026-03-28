@@ -1,9 +1,9 @@
 import fs from "node:fs"
 import process from "node:process"
 
-async function appendFile(){
+async function appendFile(filePath, content){
     try {
-        await fs.appendFile(userFilePath, "this is the content I want to append");
+        await fs.appendFile(filePath, content);
         console.log("File appended successfully");
     } catch (error) {
         console.log("Something went wrong while appending the file");
